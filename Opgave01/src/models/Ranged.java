@@ -1,5 +1,10 @@
 package models;
 
-public class Ranged {
+public class Ranged extends Weapon {
     private int range;
+
+    public Ranged(String name, int range) {
+        super(name);
+        this.range = range;
+    }
 }
