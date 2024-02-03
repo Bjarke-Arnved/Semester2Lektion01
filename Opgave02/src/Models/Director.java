@@ -10,4 +10,10 @@ public class Director {
         this.name = name;
         this.birthday = birthday;
     }
+    @Override
+    public String toString() {
+        String stringForm = name + " has thier birthday on the " + birthday;
+        System.out.println(stringForm);
+        return stringForm;
+    }
 }

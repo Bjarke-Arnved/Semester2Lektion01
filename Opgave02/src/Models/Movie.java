@@ -19,4 +19,10 @@ public class Movie {
         this.rating = rating;
         this.cast = cast;
     }
+    @Override
+    public String toString() {
+        String stringForm = title + "came out in " + productionYear + "and was directed by " + director + ". It is a " + genres + "that has gotten a rating of " + rating + ", and it stars: " + cast;
+        System.out.println(stringForm);
+        return stringForm;
+    }
 }
