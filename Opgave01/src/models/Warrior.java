@@ -7,6 +7,7 @@ public class Warrior extends Character {
 
     public Warrior(String name, int level) {
         super(name, level);
+        weapons = new ArrayList<Weapon>();
     }
     public void lootWeapon(Weapon weapon) {
         weapons.add(weapon);
