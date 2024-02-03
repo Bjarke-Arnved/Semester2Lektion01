@@ -12,4 +12,12 @@ public class Spellcaster extends Character {
     public ArrayList<Spell> getSpells() {
         return new ArrayList<Spell>(spells);
     }
+    public void learnSpell(Spell spell) {
+        if(!spells.contains(spell)) {
+            spells.add(spell);
+        }
+        else {
+            System.out.println(this.getName() + " " + " already knows this spell. And can there fore not learn it again.");
+        }
+    }
 }

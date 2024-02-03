@@ -1,10 +1,12 @@
 package models;
 
 public class Spell {
+    private String name;
     private int range;
     private Duration duration;
 
-    public Spell(int range, Duration duration) {
+    public Spell(String name, int range, Duration duration) {
+        this.name = name;
         this.range = range;
         this.duration = duration;
     }
@@ -15,5 +17,8 @@ public class Spell {
 
     public Duration getDuration() {
         return duration;
+    }
+    public String getName() {
+        return name;
     }
 }

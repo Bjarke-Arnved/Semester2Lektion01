@@ -7,4 +7,8 @@ public class Ranged extends Weapon {
         super(name);
         this.range = range;
     }
+
+    public int getRange() {
+        return range;
+    }
 }
