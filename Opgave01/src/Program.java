@@ -18,8 +18,8 @@ public class Program {
          */
         // Alternative way of doing it.
         for(Weapon weapon : fofstelr.getCarriedWeapons()) {
-            if(weapon.getClass().equals(Ranged.class)) {
-                System.out.println(((Ranged) weapon).getRange());
+            if(weapon instanceof Ranged) {
+                System.out.println(((Ranged)weapon).getRange());
             }
         }
     }

@@ -9,6 +9,7 @@ import java.util.List;
 public class Test {
     public static void main(String[] args) {
         Storage storage = initStorage();
+
     }
 
     private static Storage initStorage() {
@@ -49,5 +50,31 @@ public class Test {
         storage.addMovie(indy);
         storage.addTVSerie(friends);
         return storage;
+    }
+    public ArrayList<TVSerie> findTVSerier (Genre genre) {
+        ArrayList<TVSerie> tvSerier = new ArrayList<TVSerie>();
+        for(TVSerie tvSerie : Storage.getAllSeries()) {
+            for(Genre tvGenre : tvSerie.getGenres()) {
+                if(tvGenre.equals(genre)) {
+                    tvSerier.add(tvSerie);
+                }
+            }
+        }
+        return tvSerier;
+    }
+    public ArrayList<TVSerie> findTVSerier (Genre[] genre) {
+        ArrayList<TVSerie> tvSerier = new ArrayList<TVSerie>();
+
+        for(TVSerie tvSerie : Storage.getAllSeries()) {
+            for(Genre tvGenre : tvSerie.getGenres()) {
+                for(Genre spesificGenre : genre) {
+                    if(tvGenre.equals(spesificGenre)) {
+                        tvSerier.add(tvSerie);
+                    }
+                }
+
+            }
+        }
+        return tvSerier;
     }
 }

@@ -7,9 +7,9 @@ import Models.TVSerie;
 import java.util.ArrayList;
 
 public class Storage {
-    private ArrayList<Movie> movies = new ArrayList<Movie>();
-    private ArrayList<TVSerie> series = new ArrayList<>();
-    private ArrayList<Actor> actors = new ArrayList<Actor>();
+    private static ArrayList<Movie> movies = new ArrayList<Movie>();
+    private static ArrayList<TVSerie> series = new ArrayList<>();
+    private static ArrayList<Actor> actors = new ArrayList<Actor>();
 
     public void addMovie(Movie movie) {
         movies.add(movie);
@@ -31,5 +31,8 @@ public class Storage {
         for(TVSerie tvSerie : series) {
             System.out.println(tvSerie.toString());
         }
+    }
+    public static ArrayList<TVSerie> getAllSeries() {
+        return new ArrayList<TVSerie>(series);
     }
 }
